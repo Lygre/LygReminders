@@ -159,8 +159,8 @@
 		536EC81322FDC65A0094212B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				536EC7E622FDC6290094212B /* RemindersHomeView.swift */,
-				536EC81922FDE1830094212B /* ReminderSearchBarView.swift */,
+				536EC81B22FDE4A30094212B /* RenderingViews */,
+				536EC81C22FDE4C40094212B /* BindingViews */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -178,6 +178,22 @@
 				536EC81722FDC6960094212B /* CloudKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		536EC81B22FDE4A30094212B /* RenderingViews */ = {
+			isa = PBXGroup;
+			children = (
+				536EC7E622FDC6290094212B /* RemindersHomeView.swift */,
+			);
+			path = RenderingViews;
+			sourceTree = "<group>";
+		};
+		536EC81C22FDE4C40094212B /* BindingViews */ = {
+			isa = PBXGroup;
+			children = (
+				536EC81922FDE1830094212B /* ReminderSearchBarView.swift */,
+			);
+			path = BindingViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
