@@ -18,6 +18,12 @@
 		536EC80522FDC62B0094212B /* LygRemindersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536EC80422FDC62B0094212B /* LygRemindersUITests.swift */; };
 		536EC81822FDC6960094212B /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 536EC81722FDC6960094212B /* CloudKit.framework */; };
 		536EC81A22FDE1830094212B /* ReminderSearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536EC81922FDE1830094212B /* ReminderSearchBarView.swift */; };
+		537CC77622FE195000053375 /* ReminderCategoryFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537CC77522FE195000053375 /* ReminderCategoryFilterView.swift */; };
+		537CC77822FE1D3800053375 /* ReminderStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537CC77722FE1D3800053375 /* ReminderStore.swift */; };
+		537CC77A22FE1DEA00053375 /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537CC77922FE1DEA00053375 /* Reminder.swift */; };
+		537CC77B22FE1DEA00053375 /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537CC77922FE1DEA00053375 /* Reminder.swift */; };
+		537CC77E22FE1E4E00053375 /* Remindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537CC77D22FE1E4E00053375 /* Remindable.swift */; };
+		537CC77F22FE1E4E00053375 /* Remindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537CC77D22FE1E4E00053375 /* Remindable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +62,10 @@
 		536EC81522FDC68F0094212B /* LygReminders.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LygReminders.entitlements; sourceTree = "<group>"; };
 		536EC81722FDC6960094212B /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		536EC81922FDE1830094212B /* ReminderSearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderSearchBarView.swift; sourceTree = "<group>"; };
+		537CC77522FE195000053375 /* ReminderCategoryFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderCategoryFilterView.swift; sourceTree = "<group>"; };
+		537CC77722FE1D3800053375 /* ReminderStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderStore.swift; sourceTree = "<group>"; };
+		537CC77922FE1DEA00053375 /* Reminder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
+		537CC77D22FE1E4E00053375 /* Remindable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Remindable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				536EC81522FDC68F0094212B /* LygReminders.entitlements */,
+				537CC77C22FE1E4E00053375 /* Protocols */,
 				536EC81222FDC6400094212B /* Model */,
 				536EC81322FDC65A0094212B /* View */,
 				536EC81422FDC65F0094212B /* ViewModel */,
@@ -152,6 +163,8 @@
 		536EC81222FDC6400094212B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				537CC77922FE1DEA00053375 /* Reminder.swift */,
+				537CC77722FE1D3800053375 /* ReminderStore.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -192,8 +205,17 @@
 			isa = PBXGroup;
 			children = (
 				536EC81922FDE1830094212B /* ReminderSearchBarView.swift */,
+				537CC77522FE195000053375 /* ReminderCategoryFilterView.swift */,
 			);
 			path = BindingViews;
+			sourceTree = "<group>";
+		};
+		537CC77C22FE1E4E00053375 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				537CC77D22FE1E4E00053375 /* Remindable.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,8 +352,12 @@
 				536EC7E022FDC6290094212B /* AppDelegate.swift in Sources */,
 				536EC7E222FDC6290094212B /* SceneDelegate.swift in Sources */,
 				536EC7E722FDC6290094212B /* RemindersHomeView.swift in Sources */,
+				537CC77822FE1D3800053375 /* ReminderStore.swift in Sources */,
 				536EC7E522FDC6290094212B /* LygReminders.xcdatamodeld in Sources */,
+				537CC77E22FE1E4E00053375 /* Remindable.swift in Sources */,
+				537CC77622FE195000053375 /* ReminderCategoryFilterView.swift in Sources */,
 				536EC81A22FDE1830094212B /* ReminderSearchBarView.swift in Sources */,
+				537CC77A22FE1DEA00053375 /* Reminder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +366,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				536EC7FA22FDC62B0094212B /* LygRemindersTests.swift in Sources */,
+				537CC77B22FE1DEA00053375 /* Reminder.swift in Sources */,
+				537CC77F22FE1E4E00053375 /* Remindable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
