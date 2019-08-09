@@ -14,13 +14,15 @@ struct RemindersHomeView: View {
     
     var body: some View {
         NavigationView {
-            HStack {
-                Text("Placeholder")
-                
+            ScrollView([.vertical]) {
+                VStack {
+                    HStack {
+                        Text("Placeholder")
+                        
+                    }
+                }
             }
-            .navigationBarItems(trailing:
-                ReminderSearchBarView(searchQueryText: $searchQueryText)
-            )
+            .navigationBarItems(trailing: EditButton())
         }
     }
 }
