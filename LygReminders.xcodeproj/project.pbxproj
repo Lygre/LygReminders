@@ -16,6 +16,7 @@
 		536EC7EF22FDC62A0094212B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 536EC7ED22FDC62A0094212B /* LaunchScreen.storyboard */; };
 		536EC7FA22FDC62B0094212B /* LygRemindersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536EC7F922FDC62B0094212B /* LygRemindersTests.swift */; };
 		536EC80522FDC62B0094212B /* LygRemindersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536EC80422FDC62B0094212B /* LygRemindersUITests.swift */; };
+		536EC81822FDC6960094212B /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 536EC81722FDC6960094212B /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		536EC80022FDC62B0094212B /* LygRemindersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LygRemindersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		536EC80422FDC62B0094212B /* LygRemindersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LygRemindersUITests.swift; sourceTree = "<group>"; };
 		536EC80622FDC62B0094212B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		536EC81522FDC68F0094212B /* LygReminders.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LygReminders.entitlements; sourceTree = "<group>"; };
+		536EC81722FDC6960094212B /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				536EC81822FDC6960094212B /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +89,7 @@
 				536EC7F822FDC62B0094212B /* LygRemindersTests */,
 				536EC80322FDC62B0094212B /* LygRemindersUITests */,
 				536EC7DD22FDC6290094212B /* Products */,
+				536EC81622FDC6960094212B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,9 +106,12 @@
 		536EC7DE22FDC6290094212B /* LygReminders */ = {
 			isa = PBXGroup;
 			children = (
+				536EC81522FDC68F0094212B /* LygReminders.entitlements */,
+				536EC81222FDC6400094212B /* Model */,
+				536EC81322FDC65A0094212B /* View */,
+				536EC81422FDC65F0094212B /* ViewModel */,
 				536EC7DF22FDC6290094212B /* AppDelegate.swift */,
 				536EC7E122FDC6290094212B /* SceneDelegate.swift */,
-				536EC7E622FDC6290094212B /* ContentView.swift */,
 				536EC7E822FDC62A0094212B /* Assets.xcassets */,
 				536EC7ED22FDC62A0094212B /* LaunchScreen.storyboard */,
 				536EC7F022FDC62A0094212B /* Info.plist */,
@@ -137,6 +145,36 @@
 				536EC80622FDC62B0094212B /* Info.plist */,
 			);
 			path = LygRemindersUITests;
+			sourceTree = "<group>";
+		};
+		536EC81222FDC6400094212B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		536EC81322FDC65A0094212B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				536EC7E622FDC6290094212B /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		536EC81422FDC65F0094212B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		536EC81622FDC6960094212B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				536EC81722FDC6960094212B /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -438,6 +476,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LygReminders/LygReminders.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "LygReminders/Preview\\ Content";
 				DEVELOPMENT_TEAM = F54NBB76Q7;
@@ -458,6 +497,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LygReminders/LygReminders.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "LygReminders/Preview\\ Content";
 				DEVELOPMENT_TEAM = F54NBB76Q7;
