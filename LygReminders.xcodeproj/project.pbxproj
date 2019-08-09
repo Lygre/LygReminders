@@ -1,0 +1,614 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		536EC7E022FDC6290094212B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536EC7DF22FDC6290094212B /* AppDelegate.swift */; };
+		536EC7E222FDC6290094212B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536EC7E122FDC6290094212B /* SceneDelegate.swift */; };
+		536EC7E522FDC6290094212B /* LygReminders.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 536EC7E322FDC6290094212B /* LygReminders.xcdatamodeld */; };
+		536EC7E722FDC6290094212B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536EC7E622FDC6290094212B /* ContentView.swift */; };
+		536EC7E922FDC62A0094212B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 536EC7E822FDC62A0094212B /* Assets.xcassets */; };
+		536EC7EC22FDC62A0094212B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 536EC7EB22FDC62A0094212B /* Preview Assets.xcassets */; };
+		536EC7EF22FDC62A0094212B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 536EC7ED22FDC62A0094212B /* LaunchScreen.storyboard */; };
+		536EC7FA22FDC62B0094212B /* LygRemindersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536EC7F922FDC62B0094212B /* LygRemindersTests.swift */; };
+		536EC80522FDC62B0094212B /* LygRemindersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536EC80422FDC62B0094212B /* LygRemindersUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		536EC7F622FDC62B0094212B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 536EC7D422FDC6290094212B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 536EC7DB22FDC6290094212B;
+			remoteInfo = LygReminders;
+		};
+		536EC80122FDC62B0094212B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 536EC7D422FDC6290094212B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 536EC7DB22FDC6290094212B;
+			remoteInfo = LygReminders;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		536EC7DC22FDC6290094212B /* LygReminders.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LygReminders.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		536EC7DF22FDC6290094212B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		536EC7E122FDC6290094212B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		536EC7E422FDC6290094212B /* LygReminders.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LygReminders.xcdatamodel; sourceTree = "<group>"; };
+		536EC7E622FDC6290094212B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		536EC7E822FDC62A0094212B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		536EC7EB22FDC62A0094212B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		536EC7EE22FDC62A0094212B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		536EC7F022FDC62A0094212B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		536EC7F522FDC62B0094212B /* LygRemindersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LygRemindersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		536EC7F922FDC62B0094212B /* LygRemindersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LygRemindersTests.swift; sourceTree = "<group>"; };
+		536EC7FB22FDC62B0094212B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		536EC80022FDC62B0094212B /* LygRemindersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LygRemindersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		536EC80422FDC62B0094212B /* LygRemindersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LygRemindersUITests.swift; sourceTree = "<group>"; };
+		536EC80622FDC62B0094212B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		536EC7D922FDC6290094212B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		536EC7F222FDC62B0094212B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		536EC7FD22FDC62B0094212B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		536EC7D322FDC6290094212B = {
+			isa = PBXGroup;
+			children = (
+				536EC7DE22FDC6290094212B /* LygReminders */,
+				536EC7F822FDC62B0094212B /* LygRemindersTests */,
+				536EC80322FDC62B0094212B /* LygRemindersUITests */,
+				536EC7DD22FDC6290094212B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		536EC7DD22FDC6290094212B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				536EC7DC22FDC6290094212B /* LygReminders.app */,
+				536EC7F522FDC62B0094212B /* LygRemindersTests.xctest */,
+				536EC80022FDC62B0094212B /* LygRemindersUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		536EC7DE22FDC6290094212B /* LygReminders */ = {
+			isa = PBXGroup;
+			children = (
+				536EC7DF22FDC6290094212B /* AppDelegate.swift */,
+				536EC7E122FDC6290094212B /* SceneDelegate.swift */,
+				536EC7E622FDC6290094212B /* ContentView.swift */,
+				536EC7E822FDC62A0094212B /* Assets.xcassets */,
+				536EC7ED22FDC62A0094212B /* LaunchScreen.storyboard */,
+				536EC7F022FDC62A0094212B /* Info.plist */,
+				536EC7E322FDC6290094212B /* LygReminders.xcdatamodeld */,
+				536EC7EA22FDC62A0094212B /* Preview Content */,
+			);
+			path = LygReminders;
+			sourceTree = "<group>";
+		};
+		536EC7EA22FDC62A0094212B /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				536EC7EB22FDC62A0094212B /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		536EC7F822FDC62B0094212B /* LygRemindersTests */ = {
+			isa = PBXGroup;
+			children = (
+				536EC7F922FDC62B0094212B /* LygRemindersTests.swift */,
+				536EC7FB22FDC62B0094212B /* Info.plist */,
+			);
+			path = LygRemindersTests;
+			sourceTree = "<group>";
+		};
+		536EC80322FDC62B0094212B /* LygRemindersUITests */ = {
+			isa = PBXGroup;
+			children = (
+				536EC80422FDC62B0094212B /* LygRemindersUITests.swift */,
+				536EC80622FDC62B0094212B /* Info.plist */,
+			);
+			path = LygRemindersUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		536EC7DB22FDC6290094212B /* LygReminders */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 536EC80922FDC62B0094212B /* Build configuration list for PBXNativeTarget "LygReminders" */;
+			buildPhases = (
+				536EC7D822FDC6290094212B /* Sources */,
+				536EC7D922FDC6290094212B /* Frameworks */,
+				536EC7DA22FDC6290094212B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LygReminders;
+			productName = LygReminders;
+			productReference = 536EC7DC22FDC6290094212B /* LygReminders.app */;
+			productType = "com.apple.product-type.application";
+		};
+		536EC7F422FDC62B0094212B /* LygRemindersTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 536EC80C22FDC62B0094212B /* Build configuration list for PBXNativeTarget "LygRemindersTests" */;
+			buildPhases = (
+				536EC7F122FDC62B0094212B /* Sources */,
+				536EC7F222FDC62B0094212B /* Frameworks */,
+				536EC7F322FDC62B0094212B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				536EC7F722FDC62B0094212B /* PBXTargetDependency */,
+			);
+			name = LygRemindersTests;
+			productName = LygRemindersTests;
+			productReference = 536EC7F522FDC62B0094212B /* LygRemindersTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		536EC7FF22FDC62B0094212B /* LygRemindersUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 536EC80F22FDC62B0094212B /* Build configuration list for PBXNativeTarget "LygRemindersUITests" */;
+			buildPhases = (
+				536EC7FC22FDC62B0094212B /* Sources */,
+				536EC7FD22FDC62B0094212B /* Frameworks */,
+				536EC7FE22FDC62B0094212B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				536EC80222FDC62B0094212B /* PBXTargetDependency */,
+			);
+			name = LygRemindersUITests;
+			productName = LygRemindersUITests;
+			productReference = 536EC80022FDC62B0094212B /* LygRemindersUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		536EC7D422FDC6290094212B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = "Lygre Tech";
+				TargetAttributes = {
+					536EC7DB22FDC6290094212B = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					536EC7F422FDC62B0094212B = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = 536EC7DB22FDC6290094212B;
+					};
+					536EC7FF22FDC62B0094212B = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = 536EC7DB22FDC6290094212B;
+					};
+				};
+			};
+			buildConfigurationList = 536EC7D722FDC6290094212B /* Build configuration list for PBXProject "LygReminders" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 536EC7D322FDC6290094212B;
+			productRefGroup = 536EC7DD22FDC6290094212B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				536EC7DB22FDC6290094212B /* LygReminders */,
+				536EC7F422FDC62B0094212B /* LygRemindersTests */,
+				536EC7FF22FDC62B0094212B /* LygRemindersUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		536EC7DA22FDC6290094212B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				536EC7EF22FDC62A0094212B /* LaunchScreen.storyboard in Resources */,
+				536EC7EC22FDC62A0094212B /* Preview Assets.xcassets in Resources */,
+				536EC7E922FDC62A0094212B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		536EC7F322FDC62B0094212B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		536EC7FE22FDC62B0094212B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		536EC7D822FDC6290094212B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				536EC7E022FDC6290094212B /* AppDelegate.swift in Sources */,
+				536EC7E222FDC6290094212B /* SceneDelegate.swift in Sources */,
+				536EC7E722FDC6290094212B /* ContentView.swift in Sources */,
+				536EC7E522FDC6290094212B /* LygReminders.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		536EC7F122FDC62B0094212B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				536EC7FA22FDC62B0094212B /* LygRemindersTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		536EC7FC22FDC62B0094212B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				536EC80522FDC62B0094212B /* LygRemindersUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		536EC7F722FDC62B0094212B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 536EC7DB22FDC6290094212B /* LygReminders */;
+			targetProxy = 536EC7F622FDC62B0094212B /* PBXContainerItemProxy */;
+		};
+		536EC80222FDC62B0094212B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 536EC7DB22FDC6290094212B /* LygReminders */;
+			targetProxy = 536EC80122FDC62B0094212B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		536EC7ED22FDC62A0094212B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				536EC7EE22FDC62A0094212B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		536EC80722FDC62B0094212B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		536EC80822FDC62B0094212B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		536EC80A22FDC62B0094212B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "LygReminders/Preview\\ Content";
+				DEVELOPMENT_TEAM = F54NBB76Q7;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = LygReminders/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.LygreTech.LygReminders;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		536EC80B22FDC62B0094212B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "LygReminders/Preview\\ Content";
+				DEVELOPMENT_TEAM = F54NBB76Q7;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = LygReminders/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.LygreTech.LygReminders;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		536EC80D22FDC62B0094212B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F54NBB76Q7;
+				INFOPLIST_FILE = LygRemindersTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.LygreTech.LygRemindersTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LygReminders.app/LygReminders";
+			};
+			name = Debug;
+		};
+		536EC80E22FDC62B0094212B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F54NBB76Q7;
+				INFOPLIST_FILE = LygRemindersTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.LygreTech.LygRemindersTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LygReminders.app/LygReminders";
+			};
+			name = Release;
+		};
+		536EC81022FDC62B0094212B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F54NBB76Q7;
+				INFOPLIST_FILE = LygRemindersUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.LygreTech.LygRemindersUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LygReminders;
+			};
+			name = Debug;
+		};
+		536EC81122FDC62B0094212B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F54NBB76Q7;
+				INFOPLIST_FILE = LygRemindersUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.LygreTech.LygRemindersUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LygReminders;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		536EC7D722FDC6290094212B /* Build configuration list for PBXProject "LygReminders" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				536EC80722FDC62B0094212B /* Debug */,
+				536EC80822FDC62B0094212B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		536EC80922FDC62B0094212B /* Build configuration list for PBXNativeTarget "LygReminders" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				536EC80A22FDC62B0094212B /* Debug */,
+				536EC80B22FDC62B0094212B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		536EC80C22FDC62B0094212B /* Build configuration list for PBXNativeTarget "LygRemindersTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				536EC80D22FDC62B0094212B /* Debug */,
+				536EC80E22FDC62B0094212B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		536EC80F22FDC62B0094212B /* Build configuration list for PBXNativeTarget "LygRemindersUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				536EC81022FDC62B0094212B /* Debug */,
+				536EC81122FDC62B0094212B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		536EC7E322FDC6290094212B /* LygReminders.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				536EC7E422FDC6290094212B /* LygReminders.xcdatamodel */,
+			);
+			currentVersion = 536EC7E422FDC6290094212B /* LygReminders.xcdatamodel */;
+			path = LygReminders.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 536EC7D422FDC6290094212B /* Project object */;
+}
