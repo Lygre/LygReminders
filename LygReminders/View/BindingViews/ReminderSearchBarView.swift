@@ -41,6 +41,7 @@ struct ReminderSearchBarView: View {
     var body: some View {
         Content(searchQueryText: $searchQueryText)
     }
+    
 }
 
 #if DEBUG
