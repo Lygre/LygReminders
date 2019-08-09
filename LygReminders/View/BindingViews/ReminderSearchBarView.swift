@@ -59,9 +59,8 @@ struct ReminderSearchBarView: View {
                     
                 }
                 .padding([.top, .bottom], 8)
-                .overlay(RoundedRectangle(cornerRadius: 6).strokeBorder(Color.white, lineWidth: 1))
+                .overlay(RoundedRectangle(cornerRadius: 6).strokeBorder(Color.gray, lineWidth: 1))
                 .padding(.all, 15)
-                .background(Color.gray)
             
         }
             
