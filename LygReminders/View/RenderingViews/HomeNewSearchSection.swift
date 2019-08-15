@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct HomeNewSearchSection: View {
-    
+    @Environment(\.managedObjectContext) var managedObjectContext
     @State private var newReminderTitle = ""
     
     @State private var remindersQueryString = ""
@@ -19,8 +19,26 @@ struct HomeNewSearchSection: View {
             HStack {
                 TextField("New Reminder Title", text: $newReminderTitle, onEditingChanged: { (_) in }, onCommit: { })
                     .textFieldStyle(RoundedBorderTextFieldStyle())
-                Image(systemName: "plus.circle.fill")
-                    .imageScale(.large)
+                Button(action: {
+                    let reminderItem = ReminderItem(context: self.managedObjectContext)
+                    reminderItem.title = self.newReminderTitle
+                    reminderItem.isFlagged = false
+                    reminderItem.notes = ""
+                    reminderItem.url = nil
+                    reminderItem.images = nil
+                    
+                    do {
+                        try self.managedObjectContext.save()
+                    } catch {
+                        fatalError("Failure to save context: \(error)")
+                    }
+                    
+                    self.newReminderTitle = ""
+                    
+                }) {
+                    Image(systemName: "plus.circle.fill")
+                        .imageScale(.large)
+                }
             }
             .padding(.horizontal, 10)
         }

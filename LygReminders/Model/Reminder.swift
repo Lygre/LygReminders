@@ -28,10 +28,15 @@ extension ReminderItem {
         
         return request
     }
+    
+    func reminderViewModel() -> Reminder {
+        Reminder(id: UUID().uuidString, title: self.title ?? "PH", isFlagged: self.isFlagged, notes: self.notes ?? "None", url: self.url, images: self.images)
+    }
+    
 }
 
 // MARK: - Reminder Base Model
-struct Reminder: Codable, Remindable {
+struct Reminder: Codable, Hashable, Remindable {
     
     
     // MARK: Properties
@@ -40,7 +45,7 @@ struct Reminder: Codable, Remindable {
     var isFlagged: Bool
     var notes: String
     var url: URL?
-    var images: [URL]
+    var images: URL?
     
     // MARK: Computed Properties
     var remindOnDate: Bool {
@@ -62,7 +67,7 @@ struct Reminder: Codable, Remindable {
         return .flagged
     }
     
-    static let `default`: Reminder = Reminder(id: UUID().uuidString, title: "Debug Reminder", isFlagged: false, notes: "Debug default Reminder Type. Static property on Reminder struct.", url: nil, images: [])
+    static let `default`: Reminder = Reminder(id: UUID().uuidString, title: "Debug Reminder", isFlagged: false, notes: "Debug default Reminder Type. Static property on Reminder struct.", url: nil, images: nil)
     
 }
 
