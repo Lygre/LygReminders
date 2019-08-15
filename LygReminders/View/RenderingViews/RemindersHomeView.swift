@@ -24,74 +24,63 @@ struct RemindersHomeView: View {
     //MARK: View Body
     var body: some View {
         NavigationView {
-            VStack {
-                Section(header: ReminderSearchBarView(searchQueryText: $searchQueryText)) {
-                    ZStack(alignment: .center) {
-                    HStack(spacing: 5) {
-                        TextField("New Reminder Title", text: $newReminderTitle, onEditingChanged: { _ in }, onCommit: { })
-                        
-                        Button(action: { }, label: {
-                              Image(systemName: "folder.badge.plus.fill")
-                        })
-                            .foregroundColor(.green)
-                    }
-                    }
-                }
-                    
+            VStack(spacing: 1) {
+            
+            HomeNewSearchSection()
                 
                 ScrollView([.vertical]) {
-//                    VStack {
-                        Section {
-                            // MARK: - Category Filter Panel
-                            // TODO: Make panel and implement
-                            Button(
-                                action: {
-                                    withAnimation(.interpolatingSpring(stiffness: 300.0, damping: 30.0)) {
-                                        self.detailCardDisplayed.toggle()
-                                    }
-                            },
-                                label: { ZStack(alignment: .center) {
-                                    
-                                    RoundedRectangle(cornerRadius: 8).fill(Color.gray)
-                                        .padding([.leading, .trailing], 50)
-                                    
-                                    Text("Placeholder")
-                                        .padding(.vertical, 5)
-                                    
-                                    }
-                            }
-                            )
-                            
-                        }
-                        
-                        Section {
-                            GeometryReader { proxy in
-                                ZStack(alignment: .center) {
-                                    if self.detailCardDisplayed {
-                                        RoundedRectangle(cornerRadius: 8).fill(Color.blue)
-                                            .padding([.leading, .trailing], proxy.size.width / 10)
-                                            .frame(height: proxy.size.width)
-                                        
-                                        Text("DetailCardPLaceholder")
-                                    }
+                    VStack {
+                    Section {
+                        // MARK: - Category Filter Panel
+                        // TODO: Make panel and implement
+                        Button(
+                            action: {
+                                withAnimation(.interpolatingSpring(stiffness: 300.0, damping: 30.0)) {
+                                    self.detailCardDisplayed.toggle()
                                 }
-                                .shadow(color: Color.black, radius: 5, x: 5, y: 5)
-                                .transition(.slide)
+                        },
+                            label: { ZStack(alignment: .center) {
                                 
+                                RoundedRectangle(cornerRadius: 8).fill(Color.gray)
+                                    .padding([.leading, .trailing], 50)
                                 
-                            }
+                                Text("Placeholder")
+                                    .padding(.vertical, 5)
+                                
+                                }
                         }
+                        )
+                    }
                     }
                     
-                    // MARK: Spacer End Of VStack
-                    //                    Spacer()
-                    
+                    Section {
+                        GeometryReader { proxy in
+                            ZStack(alignment: .center) {
+                                if self.detailCardDisplayed {
+                                    RoundedRectangle(cornerRadius: 8).fill(Color.blue)
+                                        .padding([.leading, .trailing], proxy.size.width / 10)
+                                        .frame(height: proxy.size.width)
+                                    
+                                    Text("DetailCardPLaceholder")
+                                }
+                            }
+                            .shadow(color: Color.black, radius: 5, x: 5, y: 5)
+                            .transition(.slide)
+                            
+                            
+                        }
+                    }
+                    Section {
+                        Circle().fill()
+                    }
                 }
+                .padding(.top, 15)
+                // MARK: Spacer End Of VStack
             }
-//            .navigationBarTitle("", displayMode: .inline)
+            .navigationBarTitle("", displayMode: .inline)
             .navigationBarItems(trailing: EditButton())
-            
-//        .colorScheme(.dark)
+        }
+//                .colorScheme(.dark)
     }
 }
 
@@ -100,6 +89,7 @@ struct RemindersHomeView: View {
 struct RemindersHomeView_Previews: PreviewProvider {
     static var previews: some View {
         RemindersHomeView().environment(\.managedObjectContext, (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext)
+        
     }
 }
 #endif

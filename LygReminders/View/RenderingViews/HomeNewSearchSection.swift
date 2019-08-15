@@ -10,32 +10,34 @@ import SwiftUI
 
 struct HomeNewSearchSection: View {
     
-       @State private var newReminderTitle = ""
-       
-       @State private var remindersQueryString = ""
-       
-       var body: some View {
-           VStack {
-               Section(header: ReminderSearchBarView(searchQueryText: $remindersQueryString)) {
-                   ZStack(alignment: .center) {
-                       HStack {
-                           TextField("New Reminder Title", text: $newReminderTitle, onEditingChanged: { (_) in }, onCommit: { })
-                               .textFieldStyle(RoundedBorderTextFieldStyle())
-                           Image(systemName: "plus.circle.fill")
-                               .imageScale(.large)
-                       }
-                       .padding(.horizontal, 10)
-                   }
-               }
-               .foregroundColor(.green)
-           }
-       }
+    @State private var newReminderTitle = ""
+    
+    @State private var remindersQueryString = ""
+    
+    var body: some View {
+//        VStack {
+            Section(header: ReminderSearchBarView(searchQueryText: $remindersQueryString)) {
+                HStack {
+                    TextField("New Reminder Title", text: $newReminderTitle, onEditingChanged: { (_) in }, onCommit: { })
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                    Image(systemName: "plus.circle.fill")
+                        .imageScale(.large)
+                }
+                .padding(.horizontal, 10)
+//                Spacer()
+            }
+            .foregroundColor(.green)
+//            Spacer()
+//        }
+    }
 }
 
 #if DEBUG
 struct HomeNewSearchSection_Previews: PreviewProvider {
     static var previews: some View {
+        
         HomeNewSearchSection()
+    
     }
 }
 #endif
