@@ -23,7 +23,7 @@ public class ReminderItem: NSManagedObject, Identifiable {
 extension ReminderItem {
     static func getAllReminderItems() -> NSFetchRequest<ReminderItem> {
         let request: NSFetchRequest<ReminderItem> = ReminderItem.fetchRequest() as! NSFetchRequest<ReminderItem>
-        let sortDescriptor = NSSortDescriptor(key: "", ascending: true)
+        let sortDescriptor = NSSortDescriptor(key: "title", ascending: true)
         request.sortDescriptors = [sortDescriptor]
         
         return request
