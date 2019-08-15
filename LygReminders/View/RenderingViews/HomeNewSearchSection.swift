@@ -15,20 +15,16 @@ struct HomeNewSearchSection: View {
     @State private var remindersQueryString = ""
     
     var body: some View {
-//        VStack {
-            Section(header: ReminderSearchBarView(searchQueryText: $remindersQueryString)) {
-                HStack {
-                    TextField("New Reminder Title", text: $newReminderTitle, onEditingChanged: { (_) in }, onCommit: { })
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                    Image(systemName: "plus.circle.fill")
-                        .imageScale(.large)
-                }
-                .padding(.horizontal, 10)
-//                Spacer()
+        Section(header: ReminderSearchBarView(searchQueryText: $remindersQueryString)) {
+            HStack {
+                TextField("New Reminder Title", text: $newReminderTitle, onEditingChanged: { (_) in }, onCommit: { })
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                Image(systemName: "plus.circle.fill")
+                    .imageScale(.large)
             }
-            .foregroundColor(.green)
-//            Spacer()
-//        }
+            .padding(.horizontal, 10)
+        }
+        .foregroundColor(.green)
     }
 }
 

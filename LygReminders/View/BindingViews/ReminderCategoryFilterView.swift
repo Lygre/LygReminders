@@ -21,7 +21,6 @@ struct ReminderCategoryFilterView: View {
                     .overlay(
                         category.sfSymbolImage
                             .foregroundColor(.white)
-//                            .blendMode(.destinationOut)
                             .imageScale(.medium)
                 )
                         

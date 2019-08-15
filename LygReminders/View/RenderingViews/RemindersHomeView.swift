@@ -25,49 +25,47 @@ struct RemindersHomeView: View {
     var body: some View {
         NavigationView {
             VStack(spacing: 1) {
-            
-            HomeNewSearchSection()
+                
+                HomeNewSearchSection()
                 
                 ScrollView([.vertical]) {
                     VStack {
-                    Section {
-                        // MARK: - Category Filter Panel
-                        // TODO: Make panel and implement
-                        Button(
-                            action: {
+                        Section {
+                            // MARK: - Category Filter Panel
+                            // TODO: Make panel and implement
+                            Button(action: {
                                 withAnimation(.interpolatingSpring(stiffness: 300.0, damping: 30.0)) {
                                     self.detailCardDisplayed.toggle()
                                 }
-                        },
-                            label: { ZStack(alignment: .center) {
-                                
-                                RoundedRectangle(cornerRadius: 8).fill(Color.gray)
-                                    .padding([.leading, .trailing], 50)
-                                
-                                Text("Placeholder")
-                                    .padding(.vertical, 5)
-                                
-                                }
+                            },
+                                   label: {
+                                    ZStack(alignment: .center) {
+                                        RoundedRectangle(cornerRadius: 8).fill(Color.gray)
+                                            .padding([.leading, .trailing], 50)
+                                        
+                                        Text("Placeholder")
+                                            .padding(.vertical, 5)
+                                        
+                                    }
+                            })
                         }
-                        )
-                    }
                     }
                     
                     Section {
                         GeometryReader { proxy in
                             ZStack(alignment: .center) {
                                 if self.detailCardDisplayed {
+                                    
                                     RoundedRectangle(cornerRadius: 8).fill(Color.blue)
                                         .padding([.leading, .trailing], proxy.size.width / 10)
                                         .frame(height: proxy.size.width)
                                     
                                     Text("DetailCardPLaceholder")
+                                    
                                 }
                             }
                             .shadow(color: Color.black, radius: 5, x: 5, y: 5)
                             .transition(.slide)
-                            
-                            
                         }
                     }
                     Section {
@@ -80,7 +78,7 @@ struct RemindersHomeView: View {
             .navigationBarTitle("", displayMode: .inline)
             .navigationBarItems(trailing: EditButton())
         }
-//                .colorScheme(.dark)
+        //                .colorScheme(.dark)
     }
 }
 

@@ -38,8 +38,7 @@ struct ReminderSearchBarView: View {
                                   onCommit: {
                                     if self.searchQueryText.isEmpty { self.searchActive = false } }
                         )
-                        //                            .textFieldStyle(RoundedBorderTextFieldStyle())
-                        
+//                            .textFieldStyle(RoundedBorderTextFieldStyle())
                     }
                     
                     HStack(alignment: .center) {
