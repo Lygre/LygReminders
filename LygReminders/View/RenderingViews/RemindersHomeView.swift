@@ -37,12 +37,7 @@ struct RemindersHomeView: View {
                         Text(reminderItem.title)
                             .background(Color.blue)
                     }
-                    .onDelete { (index) in
-                        guard let indexToRemove = index.first else { return }
-//                        DispatchQueue.main.async {
-//                            self.reminderItems.
-//                        }
-                    }
+                    .onDelete(perform: deleteReminder(at:))
                 }
                 
             }
@@ -58,6 +53,21 @@ struct RemindersHomeView: View {
             .environment(\.editMode, .constant(self.remindersListIsEditing ? EditMode.active : EditMode.inactive))
         }
         .navigationViewStyle(StackNavigationViewStyle())
+    }
+    
+    
+    func deleteReminder(at offsets: IndexSet) {
+        guard let indexToRemove = offsets.first else { return }
+        guard let reminderItemToDelete = self.reminderItems.enumerated().first(where: { $0.0 == indexToRemove }) else { return }
+     
+        DispatchQueue.main.async {
+            self.managedObjectContext.delete(reminderItemToDelete.element)
+            do {
+                try self.managedObjectContext.save()
+            } catch {
+                print(error)
+            }
+        }
     }
     
 }
