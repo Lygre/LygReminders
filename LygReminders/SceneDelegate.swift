@@ -22,7 +22,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use a UIHostingController as window root view controller
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
-            window.rootViewController = UIHostingController(rootView: RemindersHomeView())
+            let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+            
+            let remindersHomeView = RemindersHomeView().environment(\.managedObjectContext, managedObjectContext)
+            
+            window.rootViewController = UIHostingController(rootView: remindersHomeView)
+            
             self.window = window
             window.makeKeyAndVisible()
         }

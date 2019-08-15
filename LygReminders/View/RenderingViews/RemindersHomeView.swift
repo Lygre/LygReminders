@@ -7,10 +7,13 @@
 //
 
 import SwiftUI
+import CoreData
+
 // MARK: - Reminders Home View
 
 struct RemindersHomeView: View {
-    
+    @Environment(\.managedObjectContext) var managedObjectContext
+    @FetchRequest(fetchRequest: ReminderItem.getAllReminderItems()) var reminderItems: FetchedResults<ReminderItem>
     // MARK: Constants & Properties
     
     @State private var searchQueryText = ""
@@ -79,7 +82,7 @@ struct RemindersHomeView: View {
 #if DEBUG
 struct RemindersHomeView_Previews: PreviewProvider {
     static var previews: some View {
-        RemindersHomeView()
+        RemindersHomeView().environment(\.managedObjectContext, (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext)
     }
 }
 #endif
