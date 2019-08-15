@@ -70,6 +70,13 @@ struct RemindersHomeView: View {
         }
     }
     
+//    func moveReminder(from source: IndexSet, to destination: Int) {
+//        let reversedSource = source.sorted()
+//        for index in reversedSource.reversed() {
+//            self.managedObjectContext.
+//        }
+//    }
+    
 }
 
 
