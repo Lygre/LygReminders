@@ -39,6 +39,7 @@ struct RemindersHomeView: View {
                     }
                     .onDelete(perform: deleteReminder(at:))
                 }
+                .onAppear(perform: refreshRemindersContext)
                 
             }
             .navigationBarTitle("", displayMode: .inline)
@@ -55,6 +56,17 @@ struct RemindersHomeView: View {
         .navigationViewStyle(StackNavigationViewStyle())
     }
     
+    func refreshRemindersContext() {
+//        self.managedObjectContext.propagatesDeletesAtEndOfEvent = true
+        self.managedObjectContext.automaticallyMergesChangesFromParent = true
+        
+        self.managedObjectContext.refreshAllObjects()
+        do {
+            try self.managedObjectContext.fetch(ReminderItem.getAllReminderItems())
+        } catch {
+            print(error)
+        }
+    }
     
     func deleteReminder(at offsets: IndexSet) {
         guard let indexToRemove = offsets.first else { return }
