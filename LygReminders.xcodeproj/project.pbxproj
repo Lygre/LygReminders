@@ -25,6 +25,7 @@
 		537CC77E22FE1E4E00053375 /* Remindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537CC77D22FE1E4E00053375 /* Remindable.swift */; };
 		537CC77F22FE1E4E00053375 /* Remindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537CC77D22FE1E4E00053375 /* Remindable.swift */; };
 		5393EE872305BEBB00A3E722 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5393EE862305BEBB00A3E722 /* TestView.swift */; };
+		5393EE892305C1EA00A3E722 /* HomeNewSearchSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5393EE882305C1EA00A3E722 /* HomeNewSearchSection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		537CC77922FE1DEA00053375 /* Reminder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
 		537CC77D22FE1E4E00053375 /* Remindable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Remindable.swift; sourceTree = "<group>"; };
 		5393EE862305BEBB00A3E722 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		5393EE882305C1EA00A3E722 /* HomeNewSearchSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNewSearchSection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +176,7 @@
 		536EC81322FDC65A0094212B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5393EE8A2305C2BD00A3E722 /* Debug */,
 				536EC81B22FDE4A30094212B /* RenderingViews */,
 				536EC81C22FDE4C40094212B /* BindingViews */,
 			);
@@ -200,6 +203,7 @@
 			children = (
 				536EC7E622FDC6290094212B /* RemindersHomeView.swift */,
 				5393EE862305BEBB00A3E722 /* TestView.swift */,
+				5393EE882305C1EA00A3E722 /* HomeNewSearchSection.swift */,
 			);
 			path = RenderingViews;
 			sourceTree = "<group>";
@@ -219,6 +223,13 @@
 				537CC77D22FE1E4E00053375 /* Remindable.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		5393EE8A2305C2BD00A3E722 /* Debug */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Debug;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -355,6 +366,7 @@
 				536EC7E022FDC6290094212B /* AppDelegate.swift in Sources */,
 				536EC7E222FDC6290094212B /* SceneDelegate.swift in Sources */,
 				536EC7E722FDC6290094212B /* RemindersHomeView.swift in Sources */,
+				5393EE892305C1EA00A3E722 /* HomeNewSearchSection.swift in Sources */,
 				537CC77822FE1D3800053375 /* ReminderStore.swift in Sources */,
 				536EC7E522FDC6290094212B /* LygReminders.xcdatamodeld in Sources */,
 				537CC77E22FE1E4E00053375 /* Remindable.swift in Sources */,

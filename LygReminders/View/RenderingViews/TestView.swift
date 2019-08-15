@@ -10,24 +10,23 @@ import SwiftUI
 
 struct TestView: View {
     
-    @State private var newReminderTitle = ""
+    @State private var emptyStringState = ""
+    @State private var testBooleanState = false
     
-    @State private var remindersQueryString = ""
+//    @Binding var boundVariable: Type
     
     var body: some View {
-        VStack {
-            Section(header: ReminderSearchBarView(searchQueryText: $remindersQueryString)) {
-                ZStack(alignment: .center) {
-                    HStack {
-                        TextField("New Reminder Title", text: $newReminderTitle, onEditingChanged: { (_) in }, onCommit: { })
-                            .textFieldStyle(RoundedBorderTextFieldStyle())
-                        Image(systemName: "plus.circle.fill")
-                            .imageScale(.large)
-                    }
-                    .padding(.horizontal, 10)
+        Group {
+            if testBooleanState {
+                VStack {
+                    Text("Placeholder")
+                }
+            } else {
+                VStack {
+                    Image(systemName: "nosign")
+                        .imageScale(.large)
                 }
             }
-            .foregroundColor(.green)
         }
     }
 }
