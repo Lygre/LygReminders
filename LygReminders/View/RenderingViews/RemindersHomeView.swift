@@ -16,69 +16,22 @@ struct RemindersHomeView: View {
     @FetchRequest(fetchRequest: ReminderItem.getAllReminderItems()) var reminderItems: FetchedResults<ReminderItem>
     // MARK: Constants & Properties
     
-    @State private var searchQueryText = ""
-    @State private var newReminderTitle = ""
     
-    @State private var detailCardDisplayed: Bool = true
     
     //MARK: View Body
     var body: some View {
         NavigationView {
-            VStack(spacing: 1) {
-                
+            Group {
                 HomeNewSearchSection()
-                
-                ScrollView([.vertical]) {
-                    VStack {
-                        Section {
-                            // MARK: - Category Filter Panel
-                            // TODO: Make panel and implement
-                            Button(action: {
-                                withAnimation(.interpolatingSpring(stiffness: 300.0, damping: 30.0)) {
-                                    self.detailCardDisplayed.toggle()
-                                }
-                            },
-                                   label: {
-                                    ZStack(alignment: .center) {
-                                        RoundedRectangle(cornerRadius: 8).fill(Color.gray)
-                                            .padding([.leading, .trailing], 50)
-                                        
-                                        Text("Placeholder")
-                                            .padding(.vertical, 5)
-                                        
-                                    }
-                            })
-                        }
-                    }
+//                List {
+                    Text("PH")
+//                    ForEach(
                     
-                    Section {
-                        GeometryReader { proxy in
-                            ZStack(alignment: .center) {
-                                if self.detailCardDisplayed {
-                                    
-                                    RoundedRectangle(cornerRadius: 8).fill(Color.blue)
-                                        .padding([.leading, .trailing], proxy.size.width / 10)
-                                        .frame(height: proxy.size.width)
-                                    
-                                    Text("DetailCardPLaceholder")
-                                    
-                                }
-                            }
-                            .shadow(color: Color.black, radius: 5, x: 5, y: 5)
-                            .transition(.slide)
-                        }
-                    }
-                    Section {
-                        Circle().fill()
-                    }
-                }
-                .padding(.top, 15)
-                // MARK: Spacer End Of VStack
+//                }
             }
             .navigationBarTitle("", displayMode: .inline)
             .navigationBarItems(trailing: EditButton())
         }
-        //                .colorScheme(.dark)
     }
 }
 
