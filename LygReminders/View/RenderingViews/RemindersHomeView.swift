@@ -18,7 +18,8 @@ struct RemindersHomeView: View {
     @FetchRequest(fetchRequest: ReminderItem.getAllReminderItems()) var reminderItems: FetchedResults<ReminderItem>
     
     /// Other properties with property wrappers
-    @Environment(\.editMode) var editMode: Binding<EditMode>
+//    @Environment(\.editMode) var editMode: Binding<EditMode>
+    @State private var remindersListIsEditing = false
     
     // MARK: Constants & Properties
     
@@ -36,10 +37,25 @@ struct RemindersHomeView: View {
                         Text(reminderItem.title)
                             .background(Color.blue)
                     }
+                    .onDelete { (index) in
+                        guard let indexToRemove = index.first else { return }
+//                        DispatchQueue.main.async {
+//                            self.reminderItems.
+//                        }
+                    }
                 }
+                
             }
             .navigationBarTitle("", displayMode: .inline)
-            .navigationBarItems(trailing: EditButton())
+            .navigationBarItems(trailing:
+                Button(action: {
+                    self.remindersListIsEditing.toggle()
+                },
+                       label: {
+                        self.remindersListIsEditing ? Text("Done") : Text("Edit")
+                })
+            )
+            .environment(\.editMode, .constant(self.remindersListIsEditing ? EditMode.active : EditMode.inactive))
         }
         .navigationViewStyle(StackNavigationViewStyle())
     }
@@ -50,7 +66,9 @@ struct RemindersHomeView: View {
 #if DEBUG
 struct RemindersHomeView_Previews: PreviewProvider {
     static var previews: some View {
-        RemindersHomeView().environment(\.managedObjectContext, (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext)
+        RemindersHomeView()
+            .environment(\.managedObjectContext, (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext)
+            .environment(\.editMode, .constant(EditMode.active))
         
     }
 }
