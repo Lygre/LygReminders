@@ -24,6 +24,7 @@
 		537CC77B22FE1DEA00053375 /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537CC77922FE1DEA00053375 /* Reminder.swift */; };
 		537CC77E22FE1E4E00053375 /* Remindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537CC77D22FE1E4E00053375 /* Remindable.swift */; };
 		537CC77F22FE1E4E00053375 /* Remindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537CC77D22FE1E4E00053375 /* Remindable.swift */; };
+		5393EE872305BEBB00A3E722 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5393EE862305BEBB00A3E722 /* TestView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		537CC77722FE1D3800053375 /* ReminderStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderStore.swift; sourceTree = "<group>"; };
 		537CC77922FE1DEA00053375 /* Reminder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
 		537CC77D22FE1E4E00053375 /* Remindable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Remindable.swift; sourceTree = "<group>"; };
+		5393EE862305BEBB00A3E722 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				536EC7E622FDC6290094212B /* RemindersHomeView.swift */,
+				5393EE862305BEBB00A3E722 /* TestView.swift */,
 			);
 			path = RenderingViews;
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 				537CC77822FE1D3800053375 /* ReminderStore.swift in Sources */,
 				536EC7E522FDC6290094212B /* LygReminders.xcdatamodeld in Sources */,
 				537CC77E22FE1E4E00053375 /* Remindable.swift in Sources */,
+				5393EE872305BEBB00A3E722 /* TestView.swift in Sources */,
 				537CC77622FE195000053375 /* ReminderCategoryFilterView.swift in Sources */,
 				536EC81A22FDE1830094212B /* ReminderSearchBarView.swift in Sources */,
 				537CC77A22FE1DEA00053375 /* Reminder.swift in Sources */,
