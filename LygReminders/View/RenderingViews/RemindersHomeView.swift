@@ -35,7 +35,13 @@ struct RemindersHomeView: View {
                 List {
                     ForEach(self.reminderItems.map({ $0.reminderViewModel() }), id: \.self) { reminderItem in
                         Text(reminderItem.title)
-                            .background(Color.blue)
+                            .contextMenu {
+                                VStack {
+                                    // TODO: No implementation. Need to define actions enum
+                                    Text("Delete")
+                                }
+                        }
+                        .background(Color.blue)
                     }
                     .onDelete(perform: deleteReminder(at:))
                 }
@@ -45,7 +51,9 @@ struct RemindersHomeView: View {
             .navigationBarTitle("", displayMode: .inline)
             .navigationBarItems(trailing:
                 Button(action: {
-                    self.remindersListIsEditing.toggle()
+//                    withAnimation {
+                        self.remindersListIsEditing.toggle()
+//                    }
                 },
                        label: {
                         self.remindersListIsEditing ? Text("Done") : Text("Edit")
