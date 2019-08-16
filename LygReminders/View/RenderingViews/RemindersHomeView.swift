@@ -57,15 +57,14 @@ struct RemindersHomeView: View {
     }
     
     func refreshRemindersContext() {
-//        self.managedObjectContext.propagatesDeletesAtEndOfEvent = true
         self.managedObjectContext.automaticallyMergesChangesFromParent = true
         
         self.managedObjectContext.refreshAllObjects()
-        do {
-            try self.managedObjectContext.fetch(ReminderItem.getAllReminderItems())
-        } catch {
-            print(error)
-        }
+//        do {
+//            try self.managedObjectContext.fetch(ReminderItem.getAllReminderItems())
+//        } catch {
+//            print(error)
+//        }
     }
     
     func deleteReminder(at offsets: IndexSet) {
@@ -84,8 +83,19 @@ struct RemindersHomeView: View {
     // TODO: Implement Reordering
 //    func moveReminder(from source: IndexSet, to destination: Int) {
 //        let reversedSource = source.sorted()
+//        var mutableSet = Array<Reminder>(self.reminderItems.map({ Reminder(managedObject: $0) }))
+//        let itemToMove = self.reminderItems[source.first!]
+//
 //        for index in reversedSource.reversed() {
-//            self.managedObjectContext.
+//            mutableSet.insert(mutableSet.remove(at: index), at: destination)
+//
+//        }
+//        self.managedObjectContext.refresh(itemToMove, mergeChanges: false)
+//
+//        do {
+//            try self.managedObjectContext.save()
+//        } catch {
+//            print(error)
 //        }
 //    }
     

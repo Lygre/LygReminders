@@ -25,7 +25,7 @@ final class ReminderListStore: NSObject, ObservableObject, NSFetchedResultsContr
     // MARK: Published Properties
     @Published var results = [Reminder]()
     // MARK: Properties
-    var controller = NSFetchedResultsController<ReminderItem>()
+    @Published var controller = NSFetchedResultsController<ReminderItem>()
     
     // Initializer
     override init() {
