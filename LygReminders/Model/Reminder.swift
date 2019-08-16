@@ -30,7 +30,7 @@ extension ReminderItem {
     }
     
     func reminderViewModel() -> Reminder {
-        Reminder(id: UUID().uuidString, title: self.title ?? "PH", isFlagged: self.isFlagged, notes: self.notes ?? "None", url: self.url, images: self.images)
+        Reminder(managedObject: self)
     }
     
 }
@@ -63,11 +63,34 @@ struct Reminder: Codable, Hashable, Remindable {
         return false
     }
     
+    // TODO: Why is this here? Move it somewhere else
     var filterCategory: ReminderFilterCategory {
         return .flagged
     }
     
-    static let `default`: Reminder = Reminder(id: UUID().uuidString, title: "Debug Reminder", isFlagged: false, notes: "Debug default Reminder Type. Static property on Reminder struct.", url: nil, images: nil)
+    init(title: String, isFlagged: Bool, notes: String, url: URL?, images: URL?) {
+        self.id = UUID().uuidString
+        self.title = title
+        self.isFlagged = isFlagged
+        self.notes = notes
+        self.url = url
+        self.images = images
+    }
+    
+    // MARK: Initializers
+    init(managedObject: ReminderItem) {
+        self.id = UUID().uuidString
+        self.title = managedObject.title ?? "Untitled"
+        self.isFlagged = managedObject.isFlagged
+        self.notes = managedObject.notes ?? ""
+        self.url = managedObject.url
+        self.images = managedObject.images
+    }
+    
+    
+    static let `default`: Reminder = Reminder(title: "Debug Reminder", isFlagged: false, notes: "Debug default Reminder Type. Static property on Reminder struct.", url: nil, images: nil)
+    
+    
     
 }
 
